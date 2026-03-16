@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Enzo Schiano — Contact</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:wght@300;400;500&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <nav>
+        <a href="index.html" class="nav-logo" style="text-decoration:none;">Enzo<span>.</span>Schiano</a>
+        <ul class="nav-tabs">
+            <li><a href="index.html">Accueil</a></li>
+            <li><a href="cv.html">CV</a></li>
+            <li><a href="competences.html">Compétences</a></li>
+            <li><a href="veille.html">Veille</a></li>
+            <li><a href="rgsystem.html">Projets</a></li>
+            <li><a href="contact.html" class="active">Contact</a></li>
+        </ul>
+    </nav>
+
+    <div id="contact-wrapper" style="padding-top: 4rem;">
+        <section id="contact" style="padding-top:6rem; background:var(--bg2);">
+            <div class="section-inner">
+                <div class="contact-wrapper">
+                    <div class="contact-info reveal">
+                        <p class="section-label">Disponible</p>
+                        <h2>Prenons<br>Contact</h2>
+                        <p class="contact-desc">N'hésitez pas à me contacter pour toute opportunité de stage,
+                            d'alternance ou pour échanger sur mes compétences.</p>
+                        <div class="contact-links">
+                            <a href="mailto:schianoenzo26@gmail.com" class="contact-link-item">
+                                <div class="contact-link-icon">✉️</div>
+                                <div>
+                                    <div class="contact-link-label">Email</div>
+                                    <div class="contact-link-value">schianoenzo26@gmail.com</div>
+                                </div>
+                            </a>
+                            <a href="tel:+33638867855" class="contact-link-item">
+                                <div class="contact-link-icon">📱</div>
+                                <div>
+                                    <div class="contact-link-label">Téléphone</div>
+                                    <div class="contact-link-value">+33 06 38 86 78 55</div>
+                                </div>
+                            </a>
+                            <div class="contact-link-item">
+                                <div class="contact-link-icon">📍</div>
+                                <div>
+                                    <div class="contact-link-label">Localisation</div>
+                                    <div class="contact-link-value">Pau, France</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="contact-form reveal">
+                        <div class="form-group"><label>Votre nom</label><input type="text" placeholder="Jean Dupont">
+                        </div>
+                        <div class="form-group"><label>Email</label><input type="email" placeholder="jean@exemple.com">
+                        </div>
+                        <div class="form-group"><label>Sujet</label><input type="text"
+                                placeholder="Opportunité de stage..."></div>
+                        <div class="form-group"><label>Message</label><textarea
+                                placeholder="Votre message..."></textarea></div>
+                        <button class="btn-primary" style="width:100%;justify-content:center;">Envoyer le message
+                            →</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <footer>
+        <p>© 2025 <span>Enzo Schiano</span> — Étudiant BTS SIO SISR · Pau, France</p>
+    </footer>
+
+    <script>
+        // Animations au scroll (reveal)
+        function triggerReveal() {
+            const reveals = document.querySelectorAll('.reveal');
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach((entry, i) => {
+                    if (entry.isIntersecting) {
+                        setTimeout(() => entry.target.classList.add('visible'), (i % 6) * 80);
+                        observer.unobserve(entry.target);
+                    }
+                });
+            }, { threshold: 0.1 });
+            
+            reveals.forEach(el => el.classList.remove('visible'));
+            reveals.forEach(el => observer.observe(el));
+        }
+
+        document.addEventListener('DOMContentLoaded', triggerReveal);
+    </script>
+</body>
+
+</html>
