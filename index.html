@@ -93,7 +93,7 @@
             padding: 0.3rem;
         }
 
-        .nav-tabs li button {
+        .nav-tabs li a {
             background: none;
             border: none;
             color: var(--muted);
@@ -106,30 +106,25 @@
             cursor: pointer;
             transition: all 0.2s;
             white-space: nowrap;
+            text-decoration: none;
+            display: inline-block;
         }
 
-        .nav-tabs li button:hover {
+        .nav-tabs li a:hover {
             color: var(--text);
         }
 
-        .nav-tabs li button.active {
+        .nav-tabs li a.active {
             background: rgba(255, 255, 255, 0.1);
             color: var(--accent2);
             font-weight: 600;
-        }
-
-        .page {
-            display: none;
-        }
-
-        .page.active {
-            display: block;
         }
 
         section {
             position: relative;
             z-index: 1;
             padding: 6rem 3rem;
+            min-height: auto;
         }
 
         .section-inner {
@@ -1050,19 +1045,18 @@
 <body>
 
     <nav>
-        <button class="nav-logo" onclick="showPage('accueil')">Enzo<span>.</span>Schiano</button>
+        <a href="#accueil" class="nav-logo" style="text-decoration:none;">Enzo<span>.</span>Schiano</a>
         <ul class="nav-tabs">
-            <li><button class="active" onclick="showPage('accueil')">Accueil</button></li>
-            <li><button onclick="showPage('cv')">CV</button></li>
-            <li><button onclick="showPage('competences')">Compétences</button></li>
-            <li><button onclick="showPage('veille')">Veille</button></li>
-            <li><button onclick="showPage('rgsystem')">RGSystem</button></li>
-            <li><button onclick="showPage('contact')">Contact</button></li>
+            <li><a href="#accueil" class="active">Accueil</a></li>
+            <li><a href="#cv">CV</a></li>
+            <li><a href="#competences">Compétences</a></li>
+            <li><a href="#veille">Veille</a></li>
+            <li><a href="#rgsystem">RGSystem</a></li>
+            <li><a href="#contact">Contact</a></li>
         </ul>
     </nav>
 
-    <!-- PAGE ACCUEIL -->
-    <div id="page-accueil" class="page active">
+    <div id="accueil">
         <section id="hero">
             <div class="hero-glow"></div>
             <div class="hero-content">
@@ -1071,8 +1065,8 @@
                 <p class="hero-subtitle">Technicien en administration système &amp; réseau. Passionné par les
                     infrastructures, la cybersécurité et les solutions d'entreprise.</p>
                 <div class="hero-actions">
-                    <button class="btn-primary" onclick="showPage('contact')">Me contacter →</button>
-                    <button class="btn-outline" onclick="showPage('competences')">Voir mes compétences</button>
+                    <a href="#contact-wrapper" class="btn-primary">Me contacter →</a>
+                    <a href="#competences" class="btn-outline">Voir mes compétences</a>
                 </div>
                 <div class="hero-meta">
                     <div>
@@ -1090,13 +1084,11 @@
                 </div>
             </div>
         </section>
-        <footer>
-            <p>© 2025 <span>Enzo Schiano</span> — Étudiant BTS SIO SISR · Pau, France</p>
-        </footer>
+        
     </div>
 
     <!-- PAGE CV -->
-    <div id="page-cv" class="page">
+    <div id="cv" style="padding-top: 4rem;">
         <section id="experience" style="padding-top:6rem; background:var(--bg2);">
             <div class="section-inner">
                 <p class="section-label reveal">Parcours</p>
@@ -1164,13 +1156,11 @@
                 </div>
             </div>
         </section>
-        <footer>
-            <p>© 2025 <span>Enzo Schiano</span> — Étudiant BTS SIO SISR · Pau, France</p>
-        </footer>
+        
     </div>
 
     <!-- PAGE COMPÉTENCES -->
-    <div id="page-competences" class="page">
+    <div id="competences" style="padding-top: 4rem;">
         <section id="competences" style="padding-top:6rem; background:var(--bg3);">
             <div class="section-inner">
                 <p class="section-label reveal">Savoir-faire</p>
@@ -1262,13 +1252,10 @@
                 </div>
             </div>
         </section>
-        <footer>
-            <p>© 2025 <span>Enzo Schiano</span> — Étudiant BTS SIO SISR · Pau, France</p>
-        </footer>
+        
     </div>
 
-    <!-- PAGE VEILLE -->
-    <div id="page-veille" class="page">
+    <div id="veille" style="padding-top: 4rem;">
         <div class="veille-hero">
             <div class="veille-date-badge">📡 Veille technologique · 2024–2025</div>
             <h1 class="reveal">Windows<br><span class="highlight">Server 2025</span></h1>
@@ -1486,13 +1473,10 @@
             </div>
         </div>
 
-        <footer>
-            <p>© 2025 <span>Enzo Schiano</span> — Étudiant BTS SIO SISR · Pau, France</p>
-        </footer>
+        
     </div>
 
-    <!-- PAGE RGSYSTEM -->
-    <div id="page-rgsystem" class="page">
+    <div id="rgsystem" style="padding-top: 4rem;">
         <div class="veille-hero" style="padding-bottom:1rem;">
             <div class="veille-date-badge">💻 Gouvernance IT · Solution SaaS Souveraine</div>
             <h1 class="reveal">Piloter et Sécuriser avec<br><span class="highlight">RGSystem</span></h1>
@@ -1577,13 +1561,10 @@
             </div>
         </section>
 
-        <footer>
-            <p>© 2025 <span>Enzo Schiano</span> — Étudiant BTS SIO SISR · Pau, France</p>
-        </footer>
+        
     </div>
 
-    <!-- PAGE CONTACT -->
-    <div id="page-contact" class="page">
+    <div id="contact-wrapper" style="padding-top: 4rem;">
         <section id="contact" style="padding-top:6rem; background:var(--bg2);">
             <div class="section-inner">
                 <div class="contact-wrapper">
@@ -1631,26 +1612,13 @@
                 </div>
             </div>
         </section>
-        <footer>
-            <p>© 2025 <span>Enzo Schiano</span> — Étudiant BTS SIO SISR · Pau, France</p>
-        </footer>
+        
     </div>
 
     <script>
-        function showPage(name) {
-            document.querySelectorAll('.page').forEach(p => p.classList.remove('active'));
-            document.querySelectorAll('.nav-tabs button').forEach(b => b.classList.remove('active'));
-            document.getElementById('page-' + name).classList.add('active');
-            const labels = ['accueil', 'cv', 'competences', 'veille', 'rgsystem', 'contact'];
-            const idx = labels.indexOf(name);
-            document.querySelectorAll('.nav-tabs button')[idx]?.classList.add('active');
-            window.scrollTo(0, 0);
-            setTimeout(triggerReveal, 60);
-        }
-
+        // Animations au scroll (reveal)
         function triggerReveal() {
-            const reveals = document.querySelectorAll('.page.active .reveal');
-            reveals.forEach(el => el.classList.remove('visible'));
+            const reveals = document.querySelectorAll('.reveal');
             const observer = new IntersectionObserver((entries) => {
                 entries.forEach((entry, i) => {
                     if (entry.isIntersecting) {
@@ -1658,11 +1626,37 @@
                         observer.unobserve(entry.target);
                     }
                 });
-            }, { threshold: 0.07 });
+            }, { threshold: 0.1 });
+            
+            reveals.forEach(el => el.classList.remove('visible'));
             reveals.forEach(el => observer.observe(el));
         }
 
-        triggerReveal();
+        document.addEventListener('DOMContentLoaded', triggerReveal);
+
+        // Mise à jour du menu actif selon le scroll
+        const sections = ['accueil', 'cv', 'competences', 'veille', 'rgsystem', 'contact'];
+        const navLinks = document.querySelectorAll('.nav-tabs li a');
+
+        window.addEventListener('scroll', () => {
+            let current = 'accueil';
+            sections.forEach(id => {
+                const element = document.getElementById(id);
+                // Gérer le cas 'contact' qui s'appelle 'contact-wrapper' ou dont la section interne a un ID
+                const elToMeasure = id === 'contact' ? document.getElementById('contact') : element;
+                
+                if (elToMeasure && window.scrollY >= elToMeasure.offsetTop - 200) {
+                    current = id;
+                }
+            });
+
+            navLinks.forEach(a => {
+                a.classList.remove('active');
+                if (a.getAttribute('href') === '#' + current) {
+                    a.classList.add('active');
+                }
+            });
+        });
     </script>
 </body>
 
