@@ -16,6 +16,11 @@
 
     <nav>
         <a href="index.html" class="nav-logo" style="text-decoration:none;">Enzo<span>.</span>Schiano</a>
+        <button class="nav-burger" id="burger-menu">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
         <ul class="nav-tabs">
             <li><a href="index.html" >Accueil</a></li>
             <li><a href="cv.html">CV</a></li>
@@ -132,6 +137,28 @@
             
             reveals.forEach(el => el.classList.remove('visible'));
             reveals.forEach(el => observer.observe(el));
+        }
+
+        // Menu Burger
+        const burgerMenu = document.getElementById('burger-menu');
+        const navTabs = document.querySelector('.nav-tabs');
+
+        if (burgerMenu) {
+            burgerMenu.addEventListener('click', () => {
+                burgerMenu.classList.toggle('active');
+                navTabs.classList.toggle('show');
+                document.body.style.overflow = navTabs.classList.contains('show') ? 'hidden' : '';
+            });
+
+            // Fermer le menu lors du clic sur un lien
+            const navLinks = document.querySelectorAll('.nav-tabs a');
+            navLinks.forEach(link => {
+                link.addEventListener('click', () => {
+                    burgerMenu.classList.remove('active');
+                    navTabs.classList.remove('show');
+                    document.body.style.overflow = '';
+                });
+            });
         }
 
         document.addEventListener('DOMContentLoaded', triggerReveal);
