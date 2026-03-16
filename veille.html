@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Enzo Schiano — BTS SIO SISR</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:wght@300;400;500&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <nav>
+        <a href="index.html" class="nav-logo" style="text-decoration:none;">Enzo<span>.</span>Schiano</a>
+        <ul class="nav-tabs">
+            <li><a href="index.html" >Accueil</a></li>
+            <li><a href="cv.html">CV</a></li>
+            <li><a href="competences.html">Compétences</a></li>
+            <li><a href="veille.html" class="active">Veille</a></li>
+            <li><a href="rgsystem.html">RGSystem</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </nav>
+
+    
+<div id="veille" style="padding-top: 4rem;">
+        <div class="veille-hero">
+            <div class="veille-date-badge">📡 Veille technologique · 2024–2025</div>
+            <h1 class="reveal">Windows<br><span class="highlight">Server 2025</span></h1>
+            <p class="reveal">Analyse des nouveautés, comparaison avec Server 2022, enjeux de cybersécurité et
+                ressources clés de la dernière version serveur de Microsoft, disponible depuis le 1er novembre 2024.</p>
+        </div>
+
+        <div class="divider"></div>
+
+        <div class="veille-section">
+            <div class="veille-section-title reveal">🚀 Nouveautés &amp; Fonctionnalités</div>
+            <div class="info-banner reveal">
+                <div class="info-banner-icon">ℹ️</div>
+                <div class="info-banner-text"><strong>Windows Server 2025</strong> a été annoncé lors du salon Microsoft
+                    Ignite 2024 et est passé en version stable (Generally Available) le <strong>1er novembre
+                        2024</strong>. Il succède à Windows Server 2022 avec des améliorations majeures en sécurité,
+                    performances et cloud hybride.</div>
+            </div>
+            <div class="veille-cards reveal">
+                <div class="veille-card">
+                    <div class="veille-card-icon">🔥</div>
+                    <div class="veille-card-title">Hotpatching sans redémarrage</div>
+                    <div class="veille-card-text">Les mises à jour de sécurité peuvent s'appliquer sans redémarrer le
+                        serveur, via Azure Arc. Avec Server 2022, un redémarrage mensuel était obligatoire. En 2025,
+                        seuls environ 4 redémarrages par an sont nécessaires, uniquement pour les mises à jour
+                        non-sécuritaires.</div>
+                </div>
+                <div class="veille-card">
+                    <div class="veille-card-icon">⚡</div>
+                    <div class="veille-card-title">Performances de stockage NVMe</div>
+                    <div class="veille-card-text">Les serveurs équipés de SSD NVMe gagnent jusqu'à 70 % d'IOPS
+                        supplémentaires. Le protocole NVMe-over-Fabrics est supporté nativement, permettant d'utiliser
+                        des SSD distants en FiberChannel ou Ethernet comme s'ils étaient locaux.</div>
+                </div>
+                <div class="veille-card">
+                    <div class="veille-card-icon">🤖</div>
+                    <div class="veille-card-title">Prêt pour l'IA &amp; GPU</div>
+                    <div class="veille-card-text">Le partitionnement GPU (GPU-P) permet de partager une carte graphique
+                        entre plusieurs machines virtuelles dans un cluster. Live Migration entre serveurs GPU-P
+                        incluse. Conçu pour les workloads IA et l'inférence en périphérie.</div>
+                </div>
+                <div class="veille-card">
+                    <div class="veille-card-icon">🏗️</div>
+                    <div class="veille-card-title">Hyper-V renforcé</div>
+                    <div class="veille-card-text">Cluster jusqu'à 64 serveurs physiques pour 8 000 VMs. Les VMs peuvent
+                        atteindre 2 048 processeurs virtuels et 240 To de RAM. Les VMs Génération 2 deviennent le choix
+                        par défaut, abandonnant progressivement la Génération 1.</div>
+                </div>
+            </div>
+            <div class="veille-cards three reveal">
+                <div class="veille-card">
+                    <div class="veille-card-icon">📁</div>
+                    <div class="veille-card-title">SMB amélioré</div>
+                    <div class="veille-card-text">SMB over QUIC étendu aux éditions Standard et Datacenter. La signature
+                        SMB est activée par défaut, l'authentification NTLM peut être désactivée pour les connexions SMB
+                        sortantes pour réduire la surface d'attaque.</div>
+                </div>
+                <div class="veille-card">
+                    <div class="veille-card-icon">🔗</div>
+                    <div class="veille-card-title">Intégration Azure Arc</div>
+                    <div class="veille-card-text">Connexion plus simple aux services Azure depuis des serveurs locaux.
+                        Hotpatch, sauvegarde automatique Azure Backup, outils d'analyse prédictive et connexion native
+                        aux services OpenAI disponibles via Azure Arc.</div>
+                </div>
+                <div class="veille-card">
+                    <div class="veille-card-icon">🖥️</div>
+                    <div class="veille-card-title">Interface modernisée</div>
+                    <div class="veille-card-text">Bureau aligné sur Windows 11, nouveau Gestionnaire des tâches, Windows
+                        Terminal natif, Wi-Fi et Bluetooth activables, DTrace intégré pour le monitoring système en
+                        temps réel.</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="divider" style="max-width:1100px;margin:0 auto;"></div>
+
+        <div class="veille-section">
+            <div class="veille-section-title reveal">⚖️ Comparaison avec Windows Server 2022</div>
+            <div class="veille-compare reveal">
+                <div class="compare-col">
+                    <div class="compare-header">Windows Server 2022 <span class="compare-badge old">Précédent</span>
+                    </div>
+                    <ul class="compare-list">
+                        <li>Redémarrage mensuel obligatoire pour les patches</li>
+                        <li>Hotpatch uniquement sur Azure Edition (cloud)</li>
+                        <li>SMB over QUIC réservé à Azure Edition</li>
+                        <li>Pas de support ARM64 natif</li>
+                        <li>Hyper-V sans GPU Pooling ni Live Migration GPU</li>
+                        <li>Active Directory peu modifié depuis 2016</li>
+                        <li>NVMe-over-Fabrics non supporté</li>
+                        <li>VMs Génération 1 par défaut</li>
+                        <li>Credential Guard désactivé par défaut</li>
+                        <li>Pas de DTrace natif</li>
+                    </ul>
+                </div>
+                <div class="compare-col">
+                    <div class="compare-header">Windows Server 2025 <span class="compare-badge new">Nouveau</span></div>
+                    <ul class="compare-list">
+                        <li class="plus">Hotpatch via Azure Arc → ~4 redémarrages/an</li>
+                        <li class="plus">Hotpatch disponible hors cloud (avec Arc)</li>
+                        <li class="plus">SMB over QUIC sur Standard &amp; Datacenter</li>
+                        <li class="plus">Support natif ARM64</li>
+                        <li class="plus">GPU Pooling et Live Migration GPU-P</li>
+                        <li class="plus">Active Directory nouvelle génération (32k DB)</li>
+                        <li class="plus">NVMe-over-Fabrics natif (+70% IOPS)</li>
+                        <li class="plus">VMs Génération 2 par défaut</li>
+                        <li class="plus">Credential Guard activé par défaut</li>
+                        <li class="plus">DTrace intégré nativement</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="divider" style="max-width:1100px;margin:0 auto;"></div>
+
+        <div class="veille-section">
+            <div class="veille-section-title reveal">🔒 Cybersécurité</div>
+            <div class="veille-cards three reveal">
+                <div class="veille-card">
+                    <div class="veille-card-icon">🛡️</div>
+                    <div class="veille-card-title">Credential Guard par défaut</div>
+                    <div class="veille-card-text">Isole les processus d'authentification dans un environnement sécurisé
+                        basé sur la virtualisation (VBS). Protège contre les attaques Pass-the-Hash et Golden Ticket sur
+                        Active Directory.</div>
+                </div>
+                <div class="veille-card">
+                    <div class="veille-card-icon">🔐</div>
+                    <div class="veille-card-title">TLS 1.3 &amp; DNS over HTTPS</div>
+                    <div class="veille-card-text">TLS 1.3 pris en charge nativement pour des communications réseau
+                        sécurisées. Le DNS over HTTPS (DoH) chiffre les requêtes DNS, empêchant leur interception ou
+                        manipulation par des attaquants.</div>
+                </div>
+                <div class="veille-card">
+                    <div class="veille-card-icon">🧠</div>
+                    <div class="veille-card-title">Defender for Endpoint + IA</div>
+                    <div class="veille-card-text">Intégration renforcée avec détection des anomalies en temps réel basée
+                        sur l'IA. Alertes proactives sur les menaces via le Windows Admin Center. Analyse
+                        comportementale des processus.</div>
+                </div>
+                <div class="veille-card">
+                    <div class="veille-card-icon">🏰</div>
+                    <div class="veille-card-title">VBS — Sécurité par virtualisation</div>
+                    <div class="veille-card-text">Les processus critiques sont isolés dans un environnement Hyper-V
+                        sécurisé. Même en cas de compromission du noyau Windows, les données sensibles restent
+                        inaccessibles aux attaquants.</div>
+                </div>
+                <div class="veille-card">
+                    <div class="veille-card-icon">📝</div>
+                    <div class="veille-card-title">Signature SMB par défaut</div>
+                    <div class="veille-card-text">Tous les paquets SMB sont signés par défaut, empêchant les attaques
+                        Man-in-the-Middle sur les partages réseau. Désactivation possible de NTLM pour les connexions
+                        sortantes.</div>
+                </div>
+                <div class="veille-card">
+                    <div class="veille-card-icon">🔑</div>
+                    <div class="veille-card-title">Active Directory renforcé</div>
+                    <div class="veille-card-text">Nouvelle taille de page de base de données AD (32 Ko optionnel)
+                        améliorant scalabilité et performance. Protections renforcées contre les attaques Kerberos et
+                        sur les comptes privilégiés.</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="divider" style="max-width:1100px;margin:0 auto;"></div>
+
+        <div class="veille-section">
+            <div class="veille-section-title reveal">📚 Sources &amp; Liens Utiles</div>
+            <div class="veille-sources reveal">
+                <a href="https://learn.microsoft.com/fr-fr/windows-server/get-started/whats-new-windows-server-2025"
+                    target="_blank" class="source-item">
+                    <div class="source-icon">📖</div>
+                    <div>
+                        <div class="source-label">Documentation officielle</div>
+                        <div class="source-title">Microsoft Learn — Nouveautés de Windows Server 2025</div>
+                    </div>
+                    <div class="source-arrow">↗</div>
+                </a>
+                <a href="https://www.it-connect.fr/windows-server-2025-est-disponible-quelles-sont-les-nouveautes/"
+                    target="_blank" class="source-item">
+                    <div class="source-icon">🖥️</div>
+                    <div>
+                        <div class="source-label">IT-Connect.fr</div>
+                        <div class="source-title">Windows Server 2025 est disponible : quelles sont les nouveautés ?
+                        </div>
+                    </div>
+                    <div class="source-arrow">↗</div>
+                </a>
+                <a href="https://www.lemagit.fr/actualites/366613306/Windows-Server-2025-ce-qui-change-des-novembre-2024"
+                    target="_blank" class="source-item">
+                    <div class="source-icon">📰</div>
+                    <div>
+                        <div class="source-label">LeMagIT</div>
+                        <div class="source-title">Windows Server 2025 : ce qui change — stockage, virtualisation,
+                            sécurité</div>
+                    </div>
+                    <div class="source-arrow">↗</div>
+                </a>
+                <a href="https://fr.wikipedia.org/wiki/Windows_Server_2025" target="_blank" class="source-item">
+                    <div class="source-icon">🌐</div>
+                    <div>
+                        <div class="source-label">Wikipédia</div>
+                        <div class="source-title">Windows Server 2025 — Présentation générale et historique</div>
+                    </div>
+                    <div class="source-arrow">↗</div>
+                </a>
+                <a href="https://www.dell.com/fr-fr/blog/windows-server-2025-3-nouveautes-qui-sont-autant-de-raisons-de-migrer/"
+                    target="_blank" class="source-item">
+                    <div class="source-icon">🏢</div>
+                    <div>
+                        <div class="source-label">Dell Technologies Blog</div>
+                        <div class="source-title">Windows Server 2025 : 3 nouveautés clés pour migrer</div>
+                    </div>
+                    <div class="source-arrow">↗</div>
+                </a>
+            </div>
+        </div>
+
+        
+    </div>
+    <footer>
+        <p>© 2025 <span>Enzo Schiano</span> — Étudiant BTS SIO SISR · Pau, France</p>
+    </footer>
+    <script>
+        // Animations au scroll (reveal)
+        function triggerReveal() {
+            const reveals = document.querySelectorAll('.reveal');
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach((entry, i) => {
+                    if (entry.isIntersecting) {
+                        setTimeout(() => entry.target.classList.add('visible'), (i % 6) * 80);
+                        observer.unobserve(entry.target);
+                    }
+                });
+            }, { threshold: 0.1 });
+            
+            reveals.forEach(el => el.classList.remove('visible'));
+            reveals.forEach(el => observer.observe(el));
+        }
+
+        document.addEventListener('DOMContentLoaded', triggerReveal);
+    </script>
+</body>
+</html>
